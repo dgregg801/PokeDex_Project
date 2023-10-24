@@ -45,25 +45,41 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
+  
 }
 
 .pokemonInfo {
   font-family: fantasy;
   list-style: none;
-  color: yellow;
-  border: red;
-  border-style: double;
+  border-style: ridge;
+  
+  
+  
 
   
 
 }
 
 .pokemonInfo > img {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 
-.pokemonInfo > img:hover {
+.pokemonCard > img:hover {
   box-shadow: 0 0 50px 1px orange;
   cursor: pointer;
+}
+
+.pokemonCard {
+  background-color: black;
+  
+  
+  width: 100%;
+  height: 100%;
+}
+
+.characterPageHeading {
+  font-family: cursive;
+  font-size: 100px;
+  font-weight: 700;
 }

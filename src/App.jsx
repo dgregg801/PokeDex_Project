@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   const [pokeList, setPokeList] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState([]);
+  
 
   useEffect(() => {
     fetch(
@@ -21,24 +21,21 @@ function App() {
       });
   }, []);
 
-  function imgClickHandle (id) {
-    setSelectedPokemon((prevPokemon) => {
-      return [...prevPokemon, id]
-    });
-  }
+
 
   return (
     <>
-      <h1>PokeDex</h1>
+      <h1 className="characterPageHeading" >PokeDex</h1>
       <ul className="pokemonInfoContainer">
         {pokeList.map((pokemonName) => {
           return <li className="pokemonInfo" key={pokemonName.id}>
-            {pokemonName.name}:
-            <img onClick={() => imgClickHandle(pokemonName.id)} src={pokemonName.img} alt={pokemonName.name} />
-            <p>Weaknesses: {pokemonName.weaknesses}</p>
+          <div className="pokemonCard">{pokemonName.name}:
+            <img src={pokemonName.img} alt={pokemonName.name} />
+            <p>Type: {pokemonName.type}</p>
             <p>Height: {pokemonName.height}</p>
             <p>Weight: {pokemonName.weight}</p>
-            <p>Egg: {pokemonName.egg}</p>
+            <p>Weaknesses: {pokemonName.weaknesses}</p>
+          </div>
             
             </li>;
         })}
