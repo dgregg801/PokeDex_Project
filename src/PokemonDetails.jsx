@@ -23,16 +23,16 @@ function PokemonDetails({
     <div>
       <h2>{pokemon.name}</h2>
       <img src={pokemon.img} alt={pokemon.name} />
-      <p>Number: {pokemon.num}</p>
-      <p>Type: {pokemon.type ? pokemon.type.join(", ") : "N/A"}</p>
-      <p>
-        Weaknesses: {pokemon.weaknesses ? pokemon.weaknesses.join(", ") : "N/A"}
+      <p className="selectedPokemon"><span className="selectedInfo">Number:</span> {pokemon.num}</p>
+      <p className="selectedPokemon"><span className="selectedInfo">Type:</span> {pokemon.type ? pokemon.type.join(", ") : "N/A"}</p>
+      <p className="selectedPokemon">
+        <span className="selectedInfo">Weaknesses:</span> {pokemon.weaknesses ? pokemon.weaknesses.join(", ") : "N/A"}
       </p>
 
       {/* Link to next evolution */}
       {next_evolution && (
         <div>
-          Next Evolution:
+          <span className="evolutionHeading">Next Evolution:</span>
           <ol>
             {next_evolution.map((evolution, index) => (
               <li key={index}>
@@ -52,7 +52,7 @@ function PokemonDetails({
       {/* Link to previous evolution */}
       {prev_evolution && (
         <div>
-          Previous Evolution:
+          <span className="evolutionHeading">Previous Evolution:</span>
           <ol>
             {prev_evolution.map((evolution, index) => (
               <li key={index}>
@@ -62,6 +62,7 @@ function PokemonDetails({
                   onClick={() => onSelectPokemon(evolution.num)}
                 >
                   {evolution.name}
+                  
                 </NavLink>
               </li>
             ))}

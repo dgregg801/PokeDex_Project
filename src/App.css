@@ -61,9 +61,11 @@
   height: 100%;
 }
 
+
 .pokemonDetailLink:hover {
   box-shadow: 0 0 50px 1px rgb(218, 214, 15);
   cursor: pointer;
+ 
 }
 
 .pokemonCard {
@@ -74,18 +76,53 @@
 }
 
 .characterPageHeading {
-  font-family: monospace;
+  font-display: optional;
   font-size: 120px;
   font-weight: 700;
+  font-family: fantasy;
   
   
 }
 
 a {
   font-weight: 500;
-  color: white;
+  color: navajowhite;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: white;
 }
+
+label {
+  font-family: cursive;
+  color: rgb(247, 153, 184);
+}
+
+.selectedPokemon {
+  font-family: fantasy;
+  margin: 0%;
+  color:navajowhite;
+}
+
+.evolutionHeading {
+  font-family: fantasy;
+  color: rgb(247, 153, 184);;
+}
+
+.pokemonDetailLink {
+  font-family: fantasy;
+  list-style: none;
+  margin: 0%;
+  
+}
+
+ol {
+  list-style: none;
+  margin: 0%;
+}
+
+.selectedInfo{
+  color: rgb(247, 153, 184);;
+}
+
+
